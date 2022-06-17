@@ -8,4 +8,4 @@ RUN if [ -f install.R ]; then R --quiet -f install.R; fi
 
 COPY Pipfile .
 
-RUN pip install pipenv && PIPENV_VENV_IN_PROJECT=1 pipenv install --deploy --skip-lock
+RUN pipenv install --deploy --skip-lock
