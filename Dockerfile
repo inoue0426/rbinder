@@ -61,5 +61,3 @@ RUN arch=$(uname -m) && \
 
 
 WORKDIR "${HOME}"
-© 2022 GitHub, Inc.
-Terms
