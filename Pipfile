@@ -4,13 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-rpy2 = "*"
-pandas = "*"
 torch = "*"
-numpy = "*"
 networkx = "*"
+pandas = "*"
+numpy = "*"
+rpy2 = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3"
+python_version = "3.10"
