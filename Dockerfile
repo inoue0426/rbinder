@@ -16,7 +16,7 @@ WORKDIR /tmp
 
 USER ${NB_UID}
 
-COPY requirements.txt .
+COPY install.R .
 
 RUN arch=$(uname -m) && \
     if [ "${arch}" == "aarch64" ]; then \
