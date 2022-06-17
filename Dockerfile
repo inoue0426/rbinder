@@ -34,8 +34,7 @@ RUN arch=$(uname -m) && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}" && \
-    pip install torch numpy networkx
-
-RUN if [ -f install.R ]; then R --quiet -f install.R; fi
+    pip install torch numpy networkx && \
+    R --quiet -f install.R
 
 WORKDIR "${HOME}"
