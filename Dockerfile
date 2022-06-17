@@ -34,30 +34,30 @@ RUN arch=$(uname -m) && \
     fi && \
     mamba install --quiet --yes \
     'r-base' \
-    'r-caret' \
-    'r-crayon' \
+#     'r-caret' \
+#     'r-crayon' \
     'r-devtools' \
-    'r-e1071' \
+#     'r-e1071' \
     'r-forecast' \
     'r-hexbin' \
-    'r-htmltools' \
+#     'r-htmltools' \
     'r-htmlwidgets' \
     'r-irkernel' \
-    'r-nycflights13' \
-    'r-randomforest' \
-    'r-rcurl' \
-    'r-rmarkdown' \
-    'r-rodbc' \
-    'r-rsqlite' \
-    'r-shiny' \
-    'r-tidyverse' \
+#     'r-nycflights13' \
+#     'r-randomforest' \
+#     'r-rcurl' \
+#     'r-rmarkdown' \
+#     'r-rodbc' \
+#     'r-rsqlite' \
+#     'r-shiny' \
+#     'r-tidyverse' \
     'rpy2' \
     'unixodbc' && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}" && \
-    if [ -f install.R ]; then R --quiet -f install.R; fi && \
-    pip install -r requirements.txt
-
+    pip install torch numpy networkx 
+    
+RUN if [ -f install.R ]; then R --quiet -f install.R; fi && \
 
 WORKDIR "${HOME}"
