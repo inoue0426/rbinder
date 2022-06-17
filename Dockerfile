@@ -1,5 +1,7 @@
 FROM rocker/binder:4.2.0
 
+USER root
+
 # Copy your repository contents to the image
 COPY --chown=rstudio:rstudio . ${HOME}
 
