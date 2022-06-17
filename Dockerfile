@@ -6,6 +6,6 @@ COPY --chown=rstudio:rstudio . ${HOME}
 ## Run an install.R script, if it exists.
 RUN if [ -f install.R ]; then R --quiet -f install.R; fi
 
-COPY Pipfile .
+COPY requirements.txt .
 
-RUN pipenv install --deploy --skip-lock
+RUN pip install -r requirements.txt
