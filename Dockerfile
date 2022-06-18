@@ -28,13 +28,14 @@ RUN arch=$(uname -m) && \
     'r-forecast' \
     'r-hexbin' \
     'r-htmlwidgets' \
-    'r-irkernel' \
+    'r-BiocManager' \
     'rpy2' \
     'unixodbc' && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}" && \
-    pip install torch numpy networkx && \
-    R --quiet -f install.R
+    pip install torch numpy networkx 
+#     && \
+#     R --quiet -f install.R
 
 WORKDIR "${HOME}"
