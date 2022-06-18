@@ -28,7 +28,7 @@ RUN arch=$(uname -m) && \
     'r-forecast' \
     'r-hexbin' \
     'r-htmlwidgets' \
-    'r-BiocManager' \
+    'r-biocmanager' \
     'rpy2' \
     'unixodbc' && \
     mamba clean --all -f -y && \
