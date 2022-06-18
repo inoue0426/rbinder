@@ -1,8 +1,5 @@
 FROM rpy2/base-ubuntu:master-22.04
 
-USER root
-
-COPY install.R .
-COPY Pipfile .
-
-RUN R --quiet -f install.R && pip install networkx torch
+RUN R -e "install.packages('BiocManage')" && \
+    R -e "BiocManager::install('rcellminer')" && \
+    pip install networkx torch
