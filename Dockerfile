@@ -5,4 +5,4 @@ USER root
 COPY install.R .
 COPY Pipfile .
 
-RUN R --quiet -f install.R && pip install numpy pandas networkx torch
+RUN R --quiet -f install.R && pip install networkx torch
