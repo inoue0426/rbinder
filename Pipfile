@@ -8,7 +8,6 @@ torch = "*"
 networkx = "*"
 pandas = "*"
 numpy = "*"
-rpy2 = "*"
 
 [dev-packages]
 
