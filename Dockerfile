@@ -5,4 +5,4 @@ COPY --chown=rstudio:rstudio . ${HOME}
 COPY requirements.txt .
 
 RUN if [ -f install.R ]; then R --quiet -f install.R; fi && \
-    pip install -r requirements.txt
+    pip install numpy pandas torch networkx
